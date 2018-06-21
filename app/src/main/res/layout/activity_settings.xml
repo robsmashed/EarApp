@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="15dp">
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="14dp"
+                android:layout_alignParentTop="true"
+                android:id="@+id/detailsText"
+                android:textColor="#e71e62"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Rilevamento orecchio"/>
+
+            <RelativeLayout
+                android:background="?android:selectableItemBackground"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:id="@+id/row1"
+                android:onClick="onPositiveFramesSettingClick"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/detailsText">
+
+                <RelativeLayout
+                    android:layout_toRightOf="@id/icon"
+                    android:layout_centerVertical="true"
+                    android:layout_width="match_parent"
+                    android:paddingLeft="20dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/soggetto"
+                        android:textSize="17dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Frame positivi consecutivi"
+                        android:textColor="#212121"/>
+                    <TextView
+                        android:id="@+id/positiveText"
+                        android:textSize="15dp"
+                        android:layout_below="@id/soggetto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="15"/>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#d1d1d1">
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:background="?android:selectableItemBackground"
+                android:id="@+id/row2"
+                android:paddingTop="12dp"
+                android:onClick="onNegativeFramesSettingClick"
+                android:paddingBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/row1">
+
+                <RelativeLayout
+                    android:layout_toRightOf="@id/icon2"
+                    android:layout_centerVertical="true"
+                    android:layout_width="match_parent"
+                    android:paddingLeft="20dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/sessione"
+                        android:textSize="17dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Frame negativi tollerati"
+                        android:textColor="#212121"/>
+                    <TextView
+                        android:id="@+id/negativeText"
+                        android:textSize="15dp"
+                        android:layout_below="@id/sessione"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="2"/>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+
+            <TextView
+                android:fontFamily="sans-serif-medium"
+                android:textSize="14dp"
+                android:layout_marginTop="20dp"
+                android:textColor="#e71e62"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Post produzione"/>
+
+            <RelativeLayout
+                android:background="?android:selectableItemBackground"
+                android:paddingTop="12dp"
+                android:onClick="onBordersSettingClick"
+                android:paddingBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/row1">
+
+                <RelativeLayout
+                    android:layout_centerVertical="true"
+                    android:layout_width="match_parent"
+                    android:paddingLeft="20dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/borders"
+                        android:textSize="17dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Bordo sulla regione rilevata"
+                        android:textColor="#212121"/>
+                    <TextView
+                        android:id="@+id/bordersText"
+                        android:textSize="15dp"
+                        android:layout_below="@id/borders"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="20px"/>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:fontFamily="sans-serif-medium"
+                android:textSize="14dp"
+                android:id="@+id/title2"
+                android:layout_marginTop="20dp"
+                android:textColor="#e71e62"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Database"/>
+
+            <RelativeLayout
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:background="?android:selectableItemBackground"
+                android:onClick="importDB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title2">
+
+                <RelativeLayout
+                    android:layout_toRightOf="@id/icon3"
+                    android:layout_centerVertical="true"
+                    android:layout_width="match_parent"
+                    android:paddingLeft="20dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textSize="17dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Importa"
+                        android:textColor="#212121"/>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#d1d1d1">
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:background="?android:selectableItemBackground"
+                android:onClick="exportDB"
+                android:id="@+id/row3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title2">
+
+                <RelativeLayout
+                    android:layout_toRightOf="@id/icon3"
+                    android:layout_centerVertical="true"
+                    android:layout_width="match_parent"
+                    android:paddingLeft="20dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/orecchio"
+                        android:textSize="17dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Esporta"
+                        android:textColor="#212121"/>
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

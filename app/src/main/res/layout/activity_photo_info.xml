@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PhotoInfoActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="15dp">
+
+        <TextView
+            android:textSize="16dp"
+            android:layout_alignParentTop="true"
+            android:id="@+id/detailsText"
+            android:layout_marginLeft="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:text="Dettagli Foto"/>
+
+        <RelativeLayout
+            android:id="@+id/row1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detailsText"
+            android:paddingLeft="16dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp">
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="6dp"
+                android:src="@drawable/ic_today_grey600_48dp"/>
+
+            <RelativeLayout
+                android:layout_toRightOf="@id/icon"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:paddingLeft="20dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/dataText"
+                    android:textSize="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="null"
+                    android:textColor="#313131"/>
+                <TextView
+                    android:id="@+id/dayText"
+                    android:textSize="16dp"
+                    android:layout_below="@id/dataText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="null null"/>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/row2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/row1"
+            android:paddingLeft="16dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp">
+
+            <ImageView
+                android:id="@+id/icon2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="6dp"
+                android:src="@drawable/ic_image_grey600_48dp"/>
+
+            <RelativeLayout
+                android:layout_toRightOf="@id/icon2"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:paddingLeft="20dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/orecchioText"
+                    android:textSize="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Orecchio SX"
+                    android:textColor="#313131"/>
+                <TextView
+                    android:id="@+id/mpText"
+                    android:textSize="16dp"
+                    android:layout_below="@id/orecchioText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Roberto Tarullo, Sessione 1"/>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/row3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/row2"
+            android:paddingLeft="16dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp">
+
+            <ImageView
+                android:id="@+id/icon3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="6dp"
+                android:src="@drawable/ic_camera_grey600_48dp"/>
+
+            <RelativeLayout
+                android:layout_toRightOf="@id/icon3"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:paddingLeft="20dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/infoText1"
+                    android:textSize="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Motorola XT1032"
+                    android:textColor="#313131"/>
+                <TextView
+                    android:id="@+id/infoText2"
+                    android:textSize="16dp"
+                    android:layout_below="@id/infoText1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="5MP 1944x2592 1.5MB"/>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

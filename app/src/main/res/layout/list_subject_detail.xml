@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="onItemClick"
+    android:background="?android:selectableItemBackground"
+    android:id="@+id/mainLayout">
+
+    <RelativeLayout
+        android:id="@+id/row1"
+        android:paddingLeft="60dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/detailsText">
+
+        <TextView
+            android:id="@+id/label"
+            android:textSize="17dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nome"
+            android:textColor="#313131"/>
+        <TextView
+            android:id="@+id/value"
+            android:textSize="15dp"
+            android:layout_below="@id/label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Roberto"/>
+
+    </RelativeLayout>
+</LinearLayout>

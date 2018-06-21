@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="subjects_array">
+        <item>Andrea</item>
+        <item>Giovanni</item>
+        <item>Roberto</item>
+        <item>Aldo</item>
+    </string-array>
+</resources>

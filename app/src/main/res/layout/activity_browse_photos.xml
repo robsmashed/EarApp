@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/fragmentRootView"
+    tools:context=".PhotoGroupFragment">
+
+    <TextView
+        android:textSize="14sp"
+        android:fontFamily="sans-serif-medium"
+        android:background="?android:selectableItemBackground"
+        android:padding="20dp"
+        android:id="@+id/title"
+        android:text="Titolo gruppo"
+        android:tag="title"
+        android:textColor="#D9000000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/photosRow1"
+        android:background="#FFFFFF"
+        android:layout_below="@id/title">
+        <ImageView
+            android:id="@+id/photo0"
+            android:layout_marginRight="2dp"
+            android:tag="0"
+            android:layout_width="116dp"
+            android:layout_height="116dp" />
+        <ImageView
+            android:id="@+id/photo1"
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="2dp"
+            android:tag="1"
+            android:layout_width="116dp"
+            android:layout_height="116dp" />
+        <ImageView
+            android:id="@+id/photo2"
+            android:layout_marginLeft="2dp"
+            android:tag="2"
+            android:layout_width="116dp"
+            android:layout_height="116dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:background="#FFFFFF"
+        android:visibility="gone"
+        android:layout_marginTop="4dp"
+        android:id="@+id/photosRow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/photosRow1">
+        <ImageView
+            android:id="@+id/photo3"
+            android:layout_marginRight="2dp"
+            android:tag="3"
+            android:layout_width="116dp"
+            android:layout_height="116dp" />
+        <ImageView
+            android:id="@+id/photo4"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:tag="4"
+            android:layout_width="116dp"
+            android:layout_height="116dp" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/photo5"
+                android:layout_marginLeft="2dp"
+                android:tag="5"
+                android:layout_width="116dp"
+                android:layout_height="116dp" />
+            <RelativeLayout
+                android:visibility="invisible"
+                android:layout_marginLeft="2dp"
+                android:id="@+id/morePhotosOverlay"
+                android:layout_width="116dp"
+                android:layout_height="116dp"
+                android:background="#AA000000">
+
+                <TextView
+                    android:id="@+id/morePhotosText"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:text="18 >"
+                    android:textColor="#FFFFFF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

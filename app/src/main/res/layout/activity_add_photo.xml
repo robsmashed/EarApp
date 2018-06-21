@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".addPhotoActivity">
+
+    <LinearLayout
+        android:layout_margin="35dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Soggetto"/>
+
+        <Spinner
+            android:id="@+id/soggetto_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginBottom="15dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sessione"/>
+        <Spinner
+            android:id="@+id/sessione_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="15dp">
+        </Spinner>
+
+        <TextView
+            android:id="@+id/earText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Orecchio da rilevare"/>
+
+        <Spinner
+            android:id="@+id/ear_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/earText"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#E0E0E0">
+
+        <TextView
+            android:background="?android:selectableItemBackground"
+            android:id="@+id/nextButton"
+            android:textColor="#000000"
+            android:layout_alignParentRight="true"
+            android:textSize="17dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="18dp"
+            android:layout_marginRight="40dp"
+            android:onClick="addPhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AVANTI >"/>
+    </RelativeLayout>
+</RelativeLayout>

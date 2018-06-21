@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentsActivity"
+    android:background="#FFFFFF">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:id="@+id/photosLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_marginTop="24dp"
+                    android:paddingBottom="27dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/rootLayout"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:background="@drawable/background_toolbar_translucent" />
+                </LinearLayout>
+
+            </ScrollView>
+
+            <TextView
+                android:id="@+id/noPhotosText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="invisible"
+                android:text="Nessuna foto trovata."/>
+
+            <ProgressBar
+                android:id="@+id/pbHeaderProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"/>
+
+            <com.getbase.floatingactionbutton.FloatingActionsMenu
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/multipleActions"
+                android:layout_alignParentBottom="true"
+                app:fab_addButtonColorNormal="#e71e62"
+                app:fab_addButtonColorPressed="#e76792"
+                android:layout_alignParentRight="true"
+                android:layout_margin="16dp"
+                android:layout_alignParentEnd="true">
+
+                <com.getbase.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fab_colorNormal="#e71e62"
+                    app:fab_colorPressed="#e76792"
+                    android:id="@+id/cameraFAB"
+                    android:tag="camera"
+                    app:fab_icon="@drawable/camera"
+                    android:onClick="addPhotoActivity"
+                    app:fabSize="normal" />
+
+                <com.getbase.floatingactionbutton.FloatingActionButton
+                    android:tag="gallery"
+                    app:fab_colorNormal="#e71e62"
+                    app:fab_colorPressed="#e76792"
+                    app:fab_icon="@drawable/gallery"
+                    android:id="@+id/galleryFAB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="addPhotoActivity"
+                    android:scaleType="center"
+                    app:fabSize="normal" />
+
+            </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+
+
+        </RelativeLayout>
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:layout_marginTop="24dp"
+            android:background="@android:color/white">
+
+            <TextView
+                android:id="@+id/headerTitle"
+                android:layout_marginTop="25dp"
+                android:paddingBottom="25dp"
+                android:paddingLeft="20dp"
+                android:background="#bbbbbb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ear Detection"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="#D9000000"
+                android:textSize="16dp"/>
+
+            <ListView
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:id="@+id/navListView"
+                android:layout_marginTop="80dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="prova"/>
+        </android.support.design.widget.NavigationView>
+    </android.support.v4.widget.DrawerLayout>
+</RelativeLayout>

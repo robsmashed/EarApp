@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PhotoEditActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="15dp">
+
+        <TextView
+            android:textSize="16dp"
+            android:layout_alignParentTop="true"
+            android:id="@+id/detailsText"
+            android:layout_marginLeft="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:text="Attributi foto"/>
+
+        <RelativeLayout
+            android:background="?android:selectableItemBackground"
+            android:onClick="onSoggettoClick"
+            android:paddingLeft="16dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:id="@+id/row1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detailsText">
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="6dp"
+                android:src="@drawable/ic_timer_auto_grey600_48dp"/>
+
+            <RelativeLayout
+                android:layout_toRightOf="@id/icon"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:paddingLeft="20dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/soggetto"
+                    android:textSize="17dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Soggetto"
+                    android:textColor="#313131"/>
+                <TextView
+                    android:id="@+id/soggettoText"
+                    android:textSize="15dp"
+                    android:layout_below="@id/soggetto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Roberto Tarullo"/>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:background="?android:selectableItemBackground"
+            android:id="@+id/row2"
+            android:paddingLeft="16dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:onClick="onSessioneClick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/row1">
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/icon2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="6dp"
+                android:src="@drawable/ic_assignment_grey600_48dp"/>
+
+            <RelativeLayout
+                android:layout_toRightOf="@id/icon2"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:paddingLeft="20dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/sessione"
+                    android:textSize="17dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sessione"
+                    android:textColor="#313131"/>
+                <TextView
+                    android:id="@+id/sessioneText"
+                    android:textSize="15dp"
+                    android:layout_below="@id/sessione"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sessione 1"/>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:paddingLeft="16dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:background="?android:selectableItemBackground"
+            android:onClick="onOrecchioClick"
+            android:id="@+id/row3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/row2">
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/icon3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="6dp"
+                android:src="@drawable/ic_accessibility_grey600_48dp"/>
+
+            <RelativeLayout
+                android:layout_toRightOf="@id/icon3"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:paddingLeft="20dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/orecchio"
+                    android:textSize="17dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Orecchio"
+                    android:textColor="#313131"/>
+                <TextView
+                    android:id="@+id/orecchioText"
+                    android:textSize="15dp"
+                    android:layout_below="@id/orecchio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sinistro"/>
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

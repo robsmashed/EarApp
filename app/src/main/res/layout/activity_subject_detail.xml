@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".SubjectDetailActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="15dp">
+
+        <TextView
+            android:textSize="16dp"
+            android:layout_alignParentTop="true"
+            android:id="@+id/detailsText"
+            android:layout_marginLeft="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:text="Dettagli soggetto"/>
+
+        <RelativeLayout
+            android:background="?android:selectableItemBackground"
+            android:onClick="onItemClick"
+            android:tag="0"
+            android:paddingLeft="16dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:id="@+id/row1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detailsText">
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="6dp"/>
+
+            <RelativeLayout
+                android:layout_toRightOf="@id/icon"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:paddingLeft="20dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/nome"
+                    android:textSize="17dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nome"
+                    android:textColor="#313131"/>
+                <TextView
+                    android:id="@+id/nomeText"
+                    android:textSize="15dp"
+                    android:layout_below="@id/nome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Roberto"/>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:background="?android:selectableItemBackground"
+            android:id="@+id/row2"
+            android:tag="1"
+            android:paddingLeft="16dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:onClick="onItemClick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/row1">
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/icon2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="6dp"/>
+
+            <RelativeLayout
+                android:layout_toRightOf="@id/icon2"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:paddingLeft="20dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/cognome"
+                    android:textSize="17dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cognome"
+                    android:textColor="#313131"/>
+                <TextView
+                    android:id="@+id/cognomeText"
+                    android:textSize="15dp"
+                    android:layout_below="@id/cognome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tarullo"/>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:tag="2"
+            android:paddingLeft="16dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:background="?android:selectableItemBackground"
+            android:onClick="onItemClick"
+            android:id="@+id/row3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/row2">
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/icon3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="6dp"/>
+
+            <RelativeLayout
+                android:layout_toRightOf="@id/icon3"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:paddingLeft="20dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/data"
+                    android:textSize="17dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Data di nascita"
+                    android:textColor="#313131"/>
+                <TextView
+                    android:id="@+id/dataText"
+                    android:textSize="15dp"
+                    android:layout_below="@id/data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="13/09/1994"/>
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

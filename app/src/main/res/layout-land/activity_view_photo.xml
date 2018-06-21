@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewPhotoActivity">
+
+    <ImageView
+        android:background="#000000"
+        android:id="@+id/photoToShow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <FrameLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/shadow1">
+
+        <View android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:background="@drawable/viewphoto_dropshadow"/>
+
+    </FrameLayout>
+
+    <FrameLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/shadow2">
+
+        <View android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:background="@drawable/viewphoto_dropshadow_reverse"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonsToolbar"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingBottom="0dp"
+        android:layout_marginRight="40dp"
+        android:visibility="visible"
+        android:layout_marginBottom="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3">
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/button1"
+                android:onClick="onEditClick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:backgroundTint="#000000"
+                app:elevation="0dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/share" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/button2"
+                android:onClick="onInfoClick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:backgroundTint="#000000"
+                app:elevation="0dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_error_white_24dp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/button3"
+                android:onClick="onDeleteClick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:backgroundTint="#000000"
+                app:elevation="0dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_delete_white_24dp" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

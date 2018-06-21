@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ears_array">
+        <item>Sinistro</item>
+        <item>Destro</item>
+    </string-array>
+</resources>
